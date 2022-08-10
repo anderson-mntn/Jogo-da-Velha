@@ -46,7 +46,8 @@ function checkDraw(){
 
     let c = [...board].includes('')
     if(gameOver == false && c == false ){
-        alert('Empatou')
+        setTimeout(() => { alert('Empatou')
+    }, 20)
     }
        
 }
