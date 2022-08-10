@@ -32,7 +32,6 @@ function handleMove(position) {
             playerTime = (playerTime == 0) ? 1 : 0;
         } 
     }
-
     return gameOver
 }
 
@@ -49,7 +48,7 @@ function isWin() {
         if (board[pos1] == board[pos2] &&
             board[pos1] == board[pos3] &&
             board[pos1] != '') {
-
+  
             return true;
         }
 

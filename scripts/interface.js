@@ -1,13 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     var squares = document.querySelectorAll(".square");
+    
+
+   
 
     squares.forEach((square) => {
         square.addEventListener('click', handleClick);
+        // square.addEventListener('mouseover', hoverMouse)
+
     })
-
-
+    
+    
 })
+
+// function hoverMouse(event){
+//     let quadrado = event.target;
+//     let posicao = quadrado.id;
+//     console.log(quadrado);
+//      if(playerTime == 0){
+//          quadrado.innerHTML = `<div class='opacx'></div>`
+//      }
+// }
 
 
 
@@ -29,14 +43,12 @@ function handleClick(event) {
 }
 
 function checkDraw(){
-    let inc = [...board].includes('')
-    if(inc == false){
-        setTimeout(() =>{
-           alert('O jogo empatou!') 
-        }, 10)
-      
-    } 
-    
+
+    let c = [...board].includes('')
+    if(gameOver == false && c == false ){
+        alert('Empatou')
+    }
+       
 }
 
 function updateSquare(position) {
