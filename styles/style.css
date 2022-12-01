@@ -51,6 +51,6 @@ h1, .restartBtn{
     border-radius: 2px;
     color: white;
 }
-.square:hover{
+.square, .restartBtn:hover{
     cursor: pointer;
 }
