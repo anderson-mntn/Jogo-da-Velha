@@ -21,11 +21,11 @@ function mouseOver(event){
     if (quadrado.firstChild == null){
         if(playerTime == 0){
             quadrado.classList.add("o");
-            quadrado.style.backgroundColor = "rgb(30, 117, 221)";
+            quadrado.style.backgroundColor = "rgb(78, 47, 189)";
             quadrado.style.color = "white";
         } else {
             quadrado.classList.add("x");
-            quadrado.style.backgroundColor = "#ff726f";
+            quadrado.style.backgroundColor = "rgb(230, 33, 33)";
             quadrado.style.color = "#fff";
         }
     }
@@ -42,12 +42,12 @@ function mouseOut(event){
         if(playerTime == 0){
             quadrado.classList = "square";
       
-            quadrado.style.backgroundColor = "white";
+            quadrado.style.backgroundColor = "#000";
             quadrado.style.color = "#2260bd";
         } else {
             quadrado.classList = "square";
             quadrado.classList.remove("x");
-            quadrado.style.backgroundColor = "white";
+            quadrado.style.backgroundColor = "#000";
         }
     }
 }

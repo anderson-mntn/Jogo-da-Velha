@@ -7,11 +7,11 @@
 body{
     height: 100vh;
     text-align: center;
-    background: linear-gradient(40deg, rgb(71, 121, 28) 0%, rgba(29,87,175,1) 100%);    
-    padding-top: 3rem;
+    background: linear-gradient(180deg, rgb(2, 5, 5) 0%, rgb(10, 55, 66) 100%);    
+    padding-top: 2rem;
 }
 .container{
-    background-color: #ffffff;
+    background-color: #020b1d;
     filter: brightness(0.9);
     color: #2260bd;
     margin: auto ; 
@@ -22,22 +22,25 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px #f0f0f0;
+    box-shadow: 0 0 3rem #1cbfe7;
 }
-h1, .restartBtn{
+h1{
     font-family: Arial, Helvetica, sans-serif;
     margin: 2rem auto;
-    color: #555555;
+    color: #7ce3fd;
+    text-shadow: 0 0 10px 1rem white;
 }
 
 .square{
     width: 100px;
     height: 100px;
-    border: 2px solid  #80808071;
+    border: 2px solid  #00d1ec;
     display: inline-block;
     border-radius: 1rem;
-    margin: .25rem;
+    margin: .5rem;
     color: white;
+    background: #ffffff00;
+    box-shadow: 0 0 15px #1cbfe7;
 }
 
 .o{
@@ -56,6 +59,8 @@ h1, .restartBtn{
     bottom:0;
     left:0;
     right:0;
+    color: #fff;
+    text-shadow: 0 0 5px ;
 }
 .x{
     position: relative;
@@ -73,30 +78,41 @@ h1, .restartBtn{
     bottom:0;
     left:0;
     right:0;  
+    color: #fff;
+    text-shadow: 0 0 5px ;
 }
 .restartBtn{
-    background: linear-gradient(80deg, rgba(109,195,34,1) 0%, rgba(29,87,175,1) 100%); 
-    padding: .5rem 1rem;
+    background: linear-gradient(160deg, rgb(18, 19, 17) 0%, #1cbfe7 100%); 
+    padding: .45rem 2rem;
+    width: fit-content;
     border-radius: 1rem;
-    color: white;
+    color: #fff;
     font-weight: bold;
     font-size: 1rem;
-    width: fit-content;
+    box-shadow: 0 0 px #1cbfe7;
+    margin: 2rem auto;
 }
+.restartBtn:hover{
+    background: linear-gradient(50deg, rgb(18, 19, 17) 0%, #1cbfe7 100%); 
+    animation: ease 1s;
+}
+
 .square, .restartBtn:hover{
     cursor: pointer;
 }
 #stage{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+   
 }
 #placar{
-    background-color: white;
+    background-color: #000;
+    color: #1cbfe7;
     width: fit-content;
-    margin: auto;
     border-radius: 1rem;
     padding: .5rem;
-    margin: 1rem auto;
+    margin: 2rem auto 0 ;
+    box-shadow: 0 0 15px #1cbfe7;
     
 }
 #placar ul{
