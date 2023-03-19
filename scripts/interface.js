@@ -7,21 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     squares.forEach((square) => {
         square.addEventListener('click', handleClick);
-        // square.addEventListener('mouseover', hoverMouse)
-
     })
-    
     
 })
 
-// function hoverMouse(event){
-//     let quadrado = event.target;
-//     let posicao = quadrado.id;
-//     console.log(quadrado);
-//      if(playerTime == 0){
-//          quadrado.innerHTML = `<div class='opacx'></div>`
-//      }
-// }
+
+
 
 
 
@@ -32,7 +23,7 @@ function handleClick(event) {
 
     if (handleMove(position)) {
         setTimeout(() => {
-            playerTime == 0 ? alert('Escudo venceu!') : alert('Espada venceu!')
+            playerTime == 0 ? alert('Bolinha venceu!') : alert('Cruz venceu!')
         }, 10);
     } 
 
