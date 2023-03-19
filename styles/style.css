@@ -7,7 +7,7 @@
 body{
     height: 100vh;
     text-align: center;
-    background: linear-gradient(190deg, rgb(71, 121, 28) 0%, rgba(29,87,175,1) 100%);    
+    background: linear-gradient(40deg, rgb(71, 121, 28) 0%, rgba(29,87,175,1) 100%);    
     padding-top: 3rem;
 }
 .container{
@@ -86,4 +86,24 @@ h1, .restartBtn{
 .square, .restartBtn:hover{
     cursor: pointer;
 }
-
+#stage{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#placar{
+    background-color: white;
+    width: fit-content;
+    margin: auto;
+    border-radius: 1rem;
+    padding: .5rem;
+    margin: 1rem auto;
+    
+}
+#placar ul{
+    list-style: none;
+    margin: .5rem;
+    text-align: start;
+}
+#placar ul li{
+    margin: .5rem;
+}

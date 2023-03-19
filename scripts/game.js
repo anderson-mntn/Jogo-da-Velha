@@ -57,14 +57,11 @@ function isWin() {
 
 
 
-let restartBtn = document.querySelector('.restartBtn').addEventListener('click', restart);
+let restartBtn = document.querySelector('.restartBtn').addEventListener('click', () =>{
 
-
-function restart(){
-    window.alert("aa")
     board = ['', '', '', '', '', '', '', '', ''];
     playerTime = 1;
     gameOver = false;
-    var squares = document.querySelectorAll(".square");
-    squares.innerHtml = "";
-}
+
+})
+

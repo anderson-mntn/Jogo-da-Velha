@@ -85,7 +85,29 @@ function updateSquare(position) {
 
     let restartBtn = document.querySelector('.restartBtn')
      restartBtn.addEventListener('click', ()=>{
-         square.innerHTML = `<div></div>`
+        let stage = document.querySelector("#stage");
+        stage.innerHTML = `
+        <div id="0" class="square" ></div>
+        <div id="1" class="square" ></div>
+        <div id="2" class="square"></div>
+
+        <div id="3" class="square" ></div>
+        <div id="4" class="square" ></div>
+        <div id="5" class="square" ></div>
+
+        <div id="6" class="square" ></div>
+        <div id="7" class="square" ></div>
+        <div id="8" class="square" ></div>
+        `;
+        
+    var squares = document.querySelectorAll(".square");
+    
+    squares.forEach((square) => {
+        square.addEventListener('click', handleClick);
+        square.addEventListener('mouseover', mouseOver);
+        square.addEventListener('mouseout', mouseOut);
+    })
+
     })
 }
 

@@ -19,27 +19,33 @@
     <div class="container">
         <h1>Jogo da velha</h1>
     
-        <div class="stage">
-            <div>
+        <div id="stage">
                 <div id="0" class="square" ></div>
                 <div id="1" class="square" ></div>
                 <div id="2" class="square"></div>
-            </div>
-            <div>
+
                 <div id="3" class="square" ></div>
                 <div id="4" class="square" ></div>
                 <div id="5" class="square" ></div>
-            </div>
-            <div>
+       
                 <div id="6" class="square" ></div>
                 <div id="7" class="square" ></div>
                 <div id="8" class="square" ></div>
-            </div>
         </div>
         <div>
             <div class="restartBtn">Restart</div>
         </div>
+       
     </div>
+    <div id="placar">
+        Placar
+        <ul>
+            <li>Vitórias da Cruz: <span id="crossVic"></span>.</li>
+            <li>Vitórias da Cruz: <span id="ballVic"></span>.</li>
+            <li>Empates: <span id="draws"></span>.</li>
+        </ul>
+    </div>
+    
 
     <script src="./scripts/game.js"></script>
     <script src="./scripts/interface.js"></script>
