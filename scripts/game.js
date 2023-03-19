@@ -1,6 +1,7 @@
 // iniciar minhas variáveis
+   
 let board = ['', '', '', '', '', '', '', '', ''];
-let playerTime = 0;
+let playerTime = 1;
 let symbols = ['o', 'x'];
 let gameOver = false;
 
@@ -14,8 +15,6 @@ let winStates = [
     [0, 4, 8],
     [2, 4, 6],
 ]
-
-
 
 
 
@@ -57,9 +56,15 @@ function isWin() {
 }
 
 
-let restartBtn = document.querySelector('.restartBtn').addEventListener
-    ('click', ()=>{
-        board = ['', '', '', '', '', '', '', '', ''];
-        playerTime = 0;
-        gameOver = false;
-    })
+
+let restartBtn = document.querySelector('.restartBtn').addEventListener('click', restart);
+
+
+function restart(){
+    window.alert("aa")
+    board = ['', '', '', '', '', '', '', '', ''];
+    playerTime = 1;
+    gameOver = false;
+    var squares = document.querySelectorAll(".square");
+    squares.innerHtml = "";
+}
