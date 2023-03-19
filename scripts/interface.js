@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    const crossVic = document.querySelector("#crossVic").innerHTML = 0;
+    const ballVic = document.querySelector("#ballVic").innerHTML = 0;
+    const draws = document.querySelector("#draws").innerHTML = 0;
+
     var squares = document.querySelectorAll(".square");
     
     squares.forEach((square) => {
@@ -56,36 +60,49 @@ function handleClick(event) {
     let square = event.target;
     let position = square.id;
 
+    // if (handleMove(position)) {
+    //         if(playerTime == 0){
+    //             alert('Bolinha venceu!');
+    //             ballVic.innerHTML++;
+    //         } else {
+    //             alert('Cruz venceu!');
+    //             crossVic.innerHTML++; 
+    //      }
+        
+    // } 
+
     if (handleMove(position)) {
         setTimeout(() => {
-            playerTime == 0 ? alert('Bolinha venceu!') : alert('Cruz venceu!')
-        }, 10);
+            if(playerTime == 0){ 
+                ballVic.innerHTML++;
+                alert('Bolinha venceu!'); 
+                eraseStage();
+                board = ['', '', '', '', '', '', '', '', ''];
+                playerTime = 1;
+                gameOver = false;
+            } else {
+                alert('Cruz venceu!');
+                crossVic.innerHTML++;
+                eraseStage();
+                board = ['', '', '', '', '', '', '', '', ''];
+                playerTime = 1;
+                gameOver = false;
+                } 
+        })
     } 
 
-    
+
+
     checkDraw();
     updateSquare(position);
+    
+    console.log(board)
 
 }
 
-function checkDraw(){
-
-    let c = [...board].includes('')
-    if(gameOver == false && c == false ){
-        setTimeout(() => { alert('Empatou')
-    }, 20)
-    }
-       
-}
-
-function updateSquare(position) {
-    let square = document.getElementById(position.toString());
-    let symbol = board[position];
-    square.innerHTML = `<div class='${symbol}'></div>`
-
-    let restartBtn = document.querySelector('.restartBtn')
-     restartBtn.addEventListener('click', ()=>{
-        let stage = document.querySelector("#stage");
+function eraseStage(){
+        
+    let stage = document.querySelector("#stage");
         stage.innerHTML = `
         <div id="0" class="square" ></div>
         <div id="1" class="square" ></div>
@@ -99,16 +116,41 @@ function updateSquare(position) {
         <div id="7" class="square" ></div>
         <div id="8" class="square" ></div>
         `;
-        
+
     var squares = document.querySelectorAll(".square");
     
     squares.forEach((square) => {
         square.addEventListener('click', handleClick);
         square.addEventListener('mouseover', mouseOver);
-        square.addEventListener('mouseout', mouseOut);
+        square.addEventListener('mouseout', mouseOut)
     })
 
-    })
+    
+    
+}
+
+
+
+function checkDraw(){
+
+    let c = [...board].includes('')
+    if(gameOver == false && c == false ){
+        setTimeout(() => { alert('Empatou')
+    }, 20)
+    }
+       
+}
+
+
+
+function updateSquare(position) {
+    let square = document.getElementById(position.toString());
+    let symbol = board[position];
+    square.innerHTML = `<div class='${symbol}'></div>`
+
+    let restartBtn = document.querySelector('.restartBtn')
+    restartBtn.addEventListener('click', eraseStage);
+    
 }
 
 
