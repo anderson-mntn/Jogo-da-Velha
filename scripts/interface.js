@@ -41,8 +41,8 @@ function mouseOut(event){
     } else{
         if(playerTime == 0){
             quadrado.classList = "square";
-      
             quadrado.style.backgroundColor = "#000";
+            quadrado.classList.remove("o");
             quadrado.style.color = "#2260bd";
         } else {
             quadrado.classList = "square";
