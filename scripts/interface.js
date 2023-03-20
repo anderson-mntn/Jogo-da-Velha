@@ -60,17 +60,6 @@ function handleClick(event) {
     let square = event.target;
     let position = square.id;
 
-    // if (handleMove(position)) {
-    //         if(playerTime == 0){
-    //             alert('Bolinha venceu!');
-    //             ballVic.innerHTML++;
-    //         } else {
-    //             alert('Cruz venceu!');
-    //             crossVic.innerHTML++; 
-    //      }
-        
-    // } 
-
     if (handleMove(position)) {
         setTimeout(() => {
             if(playerTime == 0){ 
@@ -124,11 +113,8 @@ function eraseStage(){
         square.addEventListener('mouseover', mouseOver);
         square.addEventListener('mouseout', mouseOut)
     })
-
-    
-    
+   
 }
-
 
 
 function checkDraw(){
