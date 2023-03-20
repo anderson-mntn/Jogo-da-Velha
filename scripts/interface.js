@@ -80,10 +80,12 @@ function handleClick(event) {
                 board = ['', '', '', '', '', '', '', '', ''];
                 playerTime = 1;
                 gameOver = false;
+                
             } else {
                 alert('Cruz venceu!');
                 crossVic.innerHTML++;
                 eraseStage();
+                resetTable();
                 board = ['', '', '', '', '', '', '', '', ''];
                 playerTime = 1;
                 gameOver = false;
@@ -101,7 +103,6 @@ function handleClick(event) {
 }
 
 function eraseStage(){
-        
     let stage = document.querySelector("#stage");
         stage.innerHTML = `
         <div id="0" class="square" ></div>
@@ -137,6 +138,11 @@ function checkDraw(){
     if(gameOver == false && c == false ){
         alert('Empatou')
         draws.innerHTML++;
+        eraseStage();
+        board = ['', '', '', '', '', '', '', '', ''];
+        playerTime = 1;
+        gameOver = false;
+    
     }
        
 }
