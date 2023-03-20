@@ -64,20 +64,19 @@ function handleClick(event) {
         setTimeout(() => {
             if(playerTime == 0){ 
                 ballVic.innerHTML++;
-                alert('Bolinha venceu!'); 
                 eraseStage();
                 board = ['', '', '', '', '', '', '', '', ''];
                 playerTime = 1;
                 gameOver = false;
-                
+                alert('Bolinha venceu!'); 
             } else {
-                alert('Cruz venceu!');
                 crossVic.innerHTML++;
                 eraseStage();
                 board = ['', '', '', '', '', '', '', '', ''];
                 playerTime = 1;
                 gameOver = false;
-                } 
+                alert('Cruz venceu!');
+            } 
         })
     } 
 
@@ -121,13 +120,12 @@ function checkDraw(){
 
     let c = [...board].includes('')
     if(gameOver == false && c == false ){
-        alert('Empatou')
         draws.innerHTML++;
         eraseStage();
         board = ['', '', '', '', '', '', '', '', ''];
         playerTime = 1;
         gameOver = false;
-    
+        alert('Empatou!')
     }
        
 }
