@@ -85,7 +85,6 @@ function handleClick(event) {
                 alert('Cruz venceu!');
                 crossVic.innerHTML++;
                 eraseStage();
-                resetTable();
                 board = ['', '', '', '', '', '', '', '', ''];
                 playerTime = 1;
                 gameOver = false;
