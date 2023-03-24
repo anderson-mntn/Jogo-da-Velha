@@ -126,6 +126,7 @@ function checkDraw(){
         playerTime = 1;
         gameOver = false;
         alert('Empatou!')
+        mouseOut();
     }
        
 }
